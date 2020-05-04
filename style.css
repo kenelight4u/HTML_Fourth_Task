@@ -127,6 +127,10 @@ h3 {
     display: inline-block;
     margin: 15px 0;
 }
+p a {
+    text-decoration: none;
+    color: red;
+}
 
 .hide {
     display: none;
