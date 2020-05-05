@@ -1,6 +1,7 @@
 body{
     margin: 0;
-    background-color: #009688;
+    /* background-color: #009688; */
+    background-color: #cbd5e0;
     font-family: sans-serif;
     display: flex;
     width: 100vw;
