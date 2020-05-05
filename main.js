@@ -21,6 +21,7 @@ const optionFour = document.querySelector('.option4');
 let questionIndex;
 let index = 0;
 let score = 0;
+scoreGrade.innerHTML = score;
 let myArray = [];
 let myArr = [];
 
@@ -66,6 +67,7 @@ const load = () => {
     index++;
 }
 
+// For selection of the right answer when one option is been clicked and calling a function to disable other keys from functioning when the right button has been click
 const check = (element) => {
     if(element.id == questions[questionIndex].answer) {
         element.classList.add('correct');
@@ -76,10 +78,12 @@ const check = (element) => {
     disAbledOptions();
 }
 
+// updating the Score board when right answer is choosen
 const scoreUpdate = () => {
     scoreGrade.innerHTML = score+=10;
 }
 
+// disableing other option tabs whenever the right or wrong button has been click
 const disAbledOptions= () => {
     for(let i = 0; i < optionsElement.length; i++) {
         optionsElement[i].classList.add('disabled');
@@ -88,13 +92,14 @@ const disAbledOptions= () => {
         }
     }
 }
-
+// whenever a next button is clicked, validate function calls, then enable function reset all button to default
 const enableOptions = () => {
     for(let i = 0; i < optionsElement.length; i++) {
         optionsElement[i].classList.remove('disabled', 'correct', 'wrong');
     }
 }
 
+// check certain condition before going to next question
 const validate = () => {
     if(!optionsElement[0].classList.contains("disabled")) {
         alert("Please select one option");
@@ -106,6 +111,7 @@ const validate = () => {
 
 const next = () => validate();
 
+// random function, shuffles the questions, makes sure no repetation and break when last question is selected
 const randomQuestion = () => {
     let randomNumber = Math.floor(Math.random()*questions.length);
     let hitDuplicate = 0;
@@ -137,6 +143,7 @@ const randomQuestion = () => {
         }
 }
 
+// when the question reaches the end ie the fifth question
 const quizOver = () => {
     quizOverElement.classList.remove('hide');
     scoreGrades.innerHTML = score;
@@ -147,6 +154,7 @@ const quizOver = () => {
     buttonElement.classList.add('hide');
 }
 
+// when the start function is been clicked
 const startFunction = () => {
     startPage.classList.add('hide');
     headerContainer.classList.remove('hide');
@@ -156,6 +164,7 @@ const startFunction = () => {
 
     randomQuestion(); 
 }
+
 startButton.addEventListener('click', startFunction);
 
 // tryAgainButton.addEventListener('click', () => {
