@@ -1,56 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz | APP</title>
+    <title>Quiz | APP
+    </title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="main.js"></script>
-
-</head>
-<body>
+    <script defer src="main.js">
+    </script>
+  </head>
+  <body>
     <div class="quiz-container">
-        <div class="start-page">
-            <h1>Quiz Game</h1>
-            <p><strong>Each question carries 10 points</strong></p>
-            <p>click start to begin</p>
-            <button type="button" class="start-button">Start</button>
+      <div class="start-page">
+        <h1>Quiz Game
+        </h1>
+        <p>
+          <strong>Each question carries 10 points
+          </strong>
+        </p>
+        <p>click start to begin
+        </p>
+        <button type="button" class="start-button">Start
+        </button>
+      </div>
+      <div class="header-container hide">
+        <div class="question-number">
+          <h3>Question 
+            <span class="question-num-value">
+            </span> of 
+            <span class="total-num-value">
+            </span>
+          </h3>
         </div>
-        <div class="header-container hide">
-            <div class="question-number">
-                <h3>Question <span class="question-num-value"></span> of <span class="total-num-value"></span></h3>
-            </div>
-    
-            <div class="score-container">
-                <h3>Score: <span class="score-grade"></span> </h3>
-            </div>
+        <div class="score-container">
+          <h3>Score: 
+            <span class="score-grade">
+            </span> 
+          </h3>
         </div>
-
-        <div class="question hide"></div>
-
-        <div class="options options-alone hide">
-            <div class="option1" id="1" onclick="check(this)"></div>
-            <div class="option2" id="2" onclick="check(this)"></div>
-            <div class="option3" id="3" onclick="check(this)"></div>
-            <div class="option4" id="4" onclick="check(this)"></div>
+      </div>
+      <div class="question hide">
+      </div>
+      <div class="options options-alone hide">
+        <div class="option1" id="1" onclick="check(this)">
         </div>
-        <div class="button hide">
-            <button type="button" class="btn" onclick="next()">Next</button>
+        <div class="option2" id="2" onclick="check(this)">
         </div>
-
-        <div class="quiz-class hide">
-            <h1>
-                Thanks for your time </br>
-                You got <span class="score-grades"></span> out of 50 obtainable Score.
-            </h1>
-
-            <p onclick="reload()"><a href="">Click to Restart</a></p>
-    
-            <!-- <button type="button" class="try-again">TryAgain</button> -->
+        <div class="option3" id="3" onclick="check(this)">
         </div>
+        <div class="option4" id="4" onclick="check(this)">
+        </div>
+      </div>
+      <div class="button hide">
+        <button type="button" class="btn" onclick="next()">Next
+        </button>
+      </div>
+      <div class="quiz-class hide">
+        <h1>
+          Thanks for your time 
+          </br>
+        You got 
+        <span class="score-grades">
+        </span> out of 50 obtainable Score.
+        </h1>
+      <p onclick="reload()">
+        <a href="">Click to Restart
+        </a>
+      </p>
+      <!-- <button type="button" class="try-again">TryAgain</button> -->
     </div>
-    
-
-    
-</body>
+    </div>
+  </body>
 </html>
